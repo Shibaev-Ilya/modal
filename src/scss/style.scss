@@ -1,0 +1,45 @@
+@import "variables";
+
+body {
+  font-family: $font;
+  background: #e5e5e5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  width: 164px;
+  height: 40px;
+  background: $buttonGradient;
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 48px;
+  margin: 150px auto;
+
+  &:hover {
+    box-shadow: 0px 6px 12px rgba(54, 113, 230, 0.4);
+  }
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  width: 680px;
+  height: 600px;
+  top: 10%;
+  left: 12%;
+  background-color: #ffffff;
+  margin: 0px auto;
+}
+
+.visible {
+  display: block;
+}
