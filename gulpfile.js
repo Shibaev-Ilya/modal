@@ -2,10 +2,10 @@ var gulp = require("gulp");
 var rename = require("gulp-rename");
 var sass = require("gulp-sass");
 var autoprefixer = require("gulp-autoprefixer");
-var imagemin = require("gulp-imagemin");
-var imageminJpegRecompress = require("imagemin-jpeg-recompress");
-var pngquant = require("imagemin-pngquant");
-var cache = require("gulp-cache");
+// var imagemin = require("gulp-imagemin");
+// var imageminJpegRecompress = require("imagemin-jpeg-recompress");
+// var pngquant = require("imagemin-pngquant");
+// var cache = require("gulp-cache");
 
 // Images optimization and copy in /img
 function images(done) {
@@ -77,6 +77,7 @@ function js(done) {
 
 function watch_file() {
   gulp.watch("./src/scss/**/*", css_style);
+  gulp.watch("./src/js/**/*", js);
 }
 
 gulp.task("default", gulp.parallel(watch_file));

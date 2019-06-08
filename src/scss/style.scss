@@ -3,10 +3,12 @@
 body {
   font-family: $font;
   background: #e5e5e5;
+  color: #2c2c2c;
 }
 
 a {
   text-decoration: none;
+  color: #2c2c2c;
 }
 
 .button {
@@ -38,6 +40,108 @@ a {
   left: 12%;
   background-color: #ffffff;
   margin: 0px auto;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 10px;
+  background-image: $buttonGradient;
+
+  h2 {
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  .buttonBottom {
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrapper {
+    width: 680px;
+    height: 365px;
+  }
+
+  .steps {
+    display: flex;
+    justify-content: space-around;
+    .step {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
+      color: $noactive;
+      a {
+        color: $noactive;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: normal;
+      }
+    }
+  }
+  .back {
+    width: 146px;
+    height: 40px;
+    background: #c2d7ff;
+    border-radius: 20px;
+    font-family: $font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  .forward {
+    width: 146px;
+    height: 40px;
+    background: #3671e6;
+    border-radius: 20px;
+    margin-left: 30px;
+    font-family: $font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.close {
+  position: absolute;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  top: -20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  &:before,
+  &:after {
+    position: absolute;
+    left: 20px;
+    top: 14px;
+    content: "";
+    height: 13px;
+    width: 1px;
+    background-color: #010002;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
 }
 
 .visible {
