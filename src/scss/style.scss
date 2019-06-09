@@ -71,6 +71,7 @@ a {
       font-size: 20px;
       font-weight: bold;
       color: $noactive;
+      position: relative;
       a {
         color: $noactive;
       }
@@ -81,6 +82,28 @@ a {
       }
     }
   }
+
+  .active {
+    a {
+      color: #2c2c2c !important;
+    }
+    span {
+      color: #444444;
+    }
+  }
+
+  .done {
+    &::before {
+      position: absolute;
+      content: "";
+      left: -24px;
+      top: -19px;
+      width: 46px;
+      height: 46px;
+      background: url("../img/done.svg") no-repeat;
+    }
+  }
+
   .back {
     width: 146px;
     height: 40px;
@@ -94,8 +117,11 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    cursor: pointer;
     color: #ffffff;
+    &:hover {
+      box-shadow: 0px 6px 12px rgba(54, 113, 230, 0.4);
+    }
   }
   .forward {
     width: 146px;
@@ -113,6 +139,10 @@ a {
     align-items: center;
     text-align: center;
     color: #ffffff;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0px 6px 12px rgba(54, 113, 230, 0.4);
+    }
   }
 }
 
