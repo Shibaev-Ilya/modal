@@ -13,9 +13,7 @@
 	<a href="#" class="button">Купить</a>
 	<div class="modal">
 		<div class="close"></div>
-		<h2>
-			подписка
-		</h2>
+		<h2>подписка</h2>
 		<div class="steps">
 			<div class="step one active"><a href="#">Шаг 1<br><span>Выберите выпуск</span></a></div>
 			<div class="step two"><a href="#">Шаг 2<br><span>Ваши данные</span></a></div>
@@ -23,15 +21,89 @@
 			<div class="step four"><a href="#">Шаг 4<br><span>Доставка</span></a></div>
 		</div>
 		<div class="wrapper">
-			<div class="step-1"></div>
-			<div class="step-2"></div>
-			<div class="step-3"></div>
-			<div class="step-4"></div>
+			<form id="form" action="index.html" method="GET">
+				<div class="step-1">
+					<select name="seriesp" id="ser">
+						<option value="" disabled selected hidden>Серия</option>
+						<option value="1">1.0</option>
+						<option value="2">2.0</option>
+						<option value="3">3.0</option>
+						<option value="4">4.0</option>
+					</select>
+					<select name="numbersMagazine[]" id="num">
+						<option value="" disabled selected hidden>Номер журнала</option>
+						<option value="num1">Перый журнал</option>
+						<option value="num2">Второй журнал</option>
+						<option value="num3">Третий журнал</option>
+						<option value="num4">Четвертый журнал</option>
+					</select>
+					<select name="sum[]" id="sum">
+						<option value="" disabled selected hidden>Количество выпусков</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<div class="step-2 hidden">
+					<select name="seriesp[]" id="se">
+						<option value="" disabled selected hidden>Имя</option>
+						<option value="1">Lorem</option>
+					</select>
+					<select name="numbersMagazine[]" id="nu">
+						<option value="" disabled selected hidden>Телефон</option>
+						<option value="num1">Lorem Перый журнал</option>
+						<option value="num2">Lorem Второй журнал</option>
+					</select>
+					<select name="sum[]" id="su">
+						<option value="" disabled selected hidden>Фамилия</option>
+						<option value="1">1 Lore</option>
+					</select>
+					<select name="sum[]" id="su">
+						<option value="" disabled selected hidden>E-mail</option>
+						<option value="1">1 Lore</option>
+					</select>
+					<select name="sum[]" id="su">
+						<option value="" disabled selected hidden>Отчество</option>
+						<option value="1">1 Lore</option>
+					</select>
+				</div>
+				<div class="step-3 hidden">
+					<select name="seriesp[]" id="se">
+						<option value="" disabled selected hidden>3 шаг</option>
+						<option value="1">Lorem</option>
+					</select>
+					<select name="numbersMagazine[]" id="nu">
+						<option value="" disabled selected hidden>3 Шаг</option>
+						<option value="num1">Lorem Перый журнал</option>
+						<option value="num2">Lorem Второй журнал</option>
+					</select>
+					<select name="sum[]" id="su">
+						<option value="" disabled selected hidden>3 Шаг</option>
+						<option value="1">1 Lore</option>
+					</select>
+					<select name="sum[]" id="su">
+						<option value="" disabled selected hidden>3 Шаг</option>
+						<option value="1">1 Lore</option>
+					</select>
+				</div>
+				<div class="step-4 hidden">
+						<select name="sum[]" id="su">
+								<option value="" disabled selected hidden>4 и последний Шаг</option>
+								<option value="1">1 Lore</option>
+							</select>
+							<select name="sum[]" id="su">
+								<option value="" disabled selected hidden>4 Шаг</option>
+								<option value="1">1 Lore</option>
+							</select>
+				</div>
+			</form>
 		</div>
 
 		<div class="buttonBottom">
 			<div class="back">Назад</div>
 			<div class="forward">Вперед</div>
+			<button type="submit" class="subsc hidden" form="form"><span>Подписаться</span></button>
 		</div>
 	</div>
 	<script src="./js/script.min.js"></script>

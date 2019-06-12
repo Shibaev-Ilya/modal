@@ -7,6 +7,11 @@ var two = document.querySelector('.two');
 var one = document.querySelector('.one');
 var three = document.querySelector('.three');
 var four = document.querySelector('.four');
+var stepOne = document.querySelector('.step-1');
+var stepTwo = document.querySelector('.step-2');
+var stepThree = document.querySelector('.step-3');
+var stepFour = document.querySelector('.step-4');
+var subsc = document.querySelector('.subsc');
 
 buy.addEventListener('click', function(evt) {
     evt.preventDefault();
@@ -24,19 +29,23 @@ forward.addEventListener('click', function() {
     console.log(countStep);
     if(countStep == 1 ) {
         two.classList.add('active');
-        one.classList.remove('active');
-        one.classList.add('done'); 
+        one.classList.add('done');
+        stepOne.classList.add('hidden');
+        stepTwo.classList.remove('hidden'); 
     }
     if (countStep == 2 ) {
         three.classList.add('active');
-        two.classList.remove('active');
         two.classList.add('done');
+        stepTwo.classList.add('hidden');
+        stepThree.classList.remove('hidden'); 
     }
     if (countStep == 3 ) {
         four.classList.add('active');
-        three.classList.remove('active');
         three.classList.add('done');
-        forward.textContent = "Подписаться";
+        stepThree.classList.add('hidden');
+        stepFour.classList.remove('hidden');
+        forward.classList.add('hidden');
+        subsc.classList.remove('hidden');
     }
     
 });
