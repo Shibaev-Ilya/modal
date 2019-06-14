@@ -13,33 +13,33 @@ var stepThree = document.querySelector('.step-3');
 var stepFour = document.querySelector('.step-4');
 var subsc = document.querySelector('.subsc');
 
-buy.addEventListener('click', function(evt) {
+buy.addEventListener('click', function (evt) {
     evt.preventDefault();
     modalWindow.classList.add('visible');
 });
 
-closeModalWindow.addEventListener('click', function() {
+closeModalWindow.addEventListener('click', function () {
     modalWindow.classList.remove('visible');
 });
 
 var countStep = 0;
 
-forward.addEventListener('click', function() {
-    countStep +=1;
+forward.addEventListener('click', function () {
+    countStep += 1;
     console.log(countStep);
-    if(countStep == 1 ) {
+    if (countStep == 1) {
         two.classList.add('active');
         one.classList.add('done');
         stepOne.classList.add('hidden');
-        stepTwo.classList.remove('hidden'); 
+        stepTwo.classList.remove('hidden');
     }
-    if (countStep == 2 ) {
+    if (countStep == 2) {
         three.classList.add('active');
         two.classList.add('done');
         stepTwo.classList.add('hidden');
-        stepThree.classList.remove('hidden'); 
+        stepThree.classList.remove('hidden');
     }
-    if (countStep == 3 ) {
+    if (countStep == 3) {
         four.classList.add('active');
         three.classList.add('done');
         stepThree.classList.add('hidden');
@@ -47,8 +47,42 @@ forward.addEventListener('click', function() {
         forward.classList.add('hidden');
         subsc.classList.remove('hidden');
     }
-    
+
 });
+
+function step1() {
+
+}
+
+function step2() {
+
+    two.classList.add('active');
+    one.classList.add('done');
+    stepOne.classList.add('hidden');
+    stepTwo.classList.remove('hidden');
+
+}
+
+function step3() {
+    if (one.classList.contains('done')) {
+        three.classList.add('active');
+        two.classList.add('done');
+        stepTwo.classList.add('hidden');
+        stepThree.classList.remove('hidden');
+        console.log('1')
+    }
+}
+
+function step4() {
+    if (one.classList.contains('done') && two.classList.contains('done')) {
+        four.classList.add('active');
+        three.classList.add('done');
+        stepThree.classList.add('hidden');
+        stepFour.classList.remove('hidden');
+        forward.classList.add('hidden');
+        subsc.classList.remove('hidden');
+    }
+}
 
 
 
